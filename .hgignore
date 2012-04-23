@@ -5,5 +5,9 @@ syntax: glob
 *.bbl
 *.toc
 *~
+*.synctex.gz
+*.pdf
+*.DS_Store
+~*
 
 syntax: regexp
