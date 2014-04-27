@@ -9,5 +9,6 @@ syntax: glob
 *.pdf
 *.DS_Store
 ~*
+ch-1.tex
 
 syntax: regexp
