@@ -1,75 +1,265 @@
-\documentclass{rspublic}
+\documentclass[10pt]{article}
+% 12 pt double spaced, British spellings for PRSB
 
-% For revision control
-\usepackage{rcs-multi}
-\rcsid{$Id$}
-\rcsid{$Header$}
-\rcskwsave{$Author$}
-\rcskwsave{$Date$} 
-\rcskwsave{$Revision$}
-%%\rcsRegisterAuthor{devangel}{Dennis Jos{\'e} Evangelista}
-\rcsRegisterAuthor{devangel}{Dennis J. Evangelista}
+% ducks only
 
-% I typically use these
+% bibliographies: numerical citations in square brackets in text
+% sorted in order of appearance, with prsb formatted references at end.
+\usepackage[square,numbers,sort&compress]{natbib}
+\bibliographystyle{prsb}
+
+% packages to include
+\usepackage{authblk}
 \usepackage{graphicx}
-%\usepackage[usenames,dvipsnames]{color}
-%\usepackage{makeidx}
-\usepackage{siunitx}
+\usepackage{siunitx} % try to make it so it doesnt need this
 
-% PDF metadata
-% not compatible with rsauthor!!!
-%\usepackage{hyperref}
-%\hypersetup{pdftitle={Aerodynamics of display dives in Anna's Hummingbirds}}
-%\hypersetup{pdfauthor={Dennis J. Evangelista and Christopher J. Clark}}
-%\hypersetup{pdfsubject={biomechanics}}
-%\hypersetup{pdfkeywords={biomechanics, Anna's hummingbird, \emph{Calypte anna}, dive, display}}
-%\hypersetup{colorlinks=true,citecolor=Violet,linkcolor=Blue,urlcolor=Red}
-
-% Biology style references
-\usepackage[round]{natbib}
-\setcitestyle{authoryear, round, comma, aysep={;}, yysep={,}, notesep={, }}
-\bibliographystyle{rspublicnat}
-
-% Figures at end for draft
-%\usepackage[lists,tablesfirst]{endfloat}
-
-% Genus and species names
+% macros defined
 \newcommand{\Anasplatyrhynchos}{\emph{Anas platyrhynchos}}
+\newcommand{\Alectorischukar}{\emph{Alectoris chukar}}
 
+% unit definitions
 
+% for review only
+\usepackage{lineno}
+\usepackage{setspace}
+%\doublespacing % double space per PRSB instructions to authors
 
-
-% Title block information
-\begin{document}
-\title[Maneuvering during ontogeny in Mallard Ducks]{Aerial righting, directed aerial descent, and maneuvering during ontogeny in Mallard Ducks (\Anasplatyrhynchos)}
-\author[D. Evangelista \emph{et. al}]{Dennis Evangelista, URAPs, and Robert Dudley}
-\affiliation{University of California, Berkeley, Berkeley, CA, USA}
+% title block information
+\title{Aerial righting, directed aerial descent, and manoeuvring during ontogeny in Mallard Ducks (\Anasplatyrhynchos)}
+\author[1,2]{Dennis Evangelista\thanks{author for correspondence: devangel77b@gmail.com}}
+\author[1]{Sharlene Cam}
+\author[1]{Matthew Ho}
+\author[1]{Yvonne Lin}
+\author[1]{Robert Stevenson}
+\affil[1]{Department of Integrative Biology, University of California, Berkeley, CA 94720, USA}
+\affil[2]{current address: Department of Biology, University of North Carolina at Chapel Hill, NC 27599, USA}
 \date{\today}
-\label{firstpage}
+
+
+\begin{document}
 \maketitle
 
 
-\begin{abstract}{biomechanics, aerodynamics, stability, maneuvering, duck, \Anasplatyrhynchos}
-This paper describes stuff...  
+\begin{abstract}
+We filmed aerial behaviours of Mallard Ducks (\Anasplatyrhynchos) from hatching through fledging as they were presented with aerial manoeuvring challenges. Ducks have received attention for ontogenetic transitional wing hypotheses and wing-assisted incline running (WAIR) prior to flight \citep{Dial:2003, Jackson:2009, Tobalske:2011}, and provide a good contrast to other studies with Chukar Partridge (\Alectorischukar) because they develop wings slowly yet reach an endpoint with long-distance migratory flights.  In ducks, we observed transitions consistent with observations in Chukar and inconsistent with WAIR.  These findings highlight the importance of manoeuvring during development and in the origin of flight.
 \end{abstract}
 
+\noindent{keywords: biomechanics, aerodynamics, stability, maneuvering, duck, \Anasplatyrhynchos}
 
-
-%\jname{Proc.\ R.\ Soc.\ B}
-%\jdoi{doi:10.1098/rspb}
+%% for line numbers
+\setpagewiselinenumbers
+\modulolinenumbers[5]
+\linenumbers
 
 \section{Introduction}
+In the companion paper, citation, we tested hypotheses of the origin of bird flight by examining wing use during aerial challenges over ontogeny.  Previous workers have used the Chukar Partridge (\Alectorischukar), a ground-dwelling game bird native to Asia but imported to the US, as a model system to explore the use of the wings to assist incline running \citep{Dial:2003}.  For comparison to this existing data set, chukars are a logical candidate for these experiments.  We found that...
+
+For further comparison, we also examined one batch of Mallard Duck (\Anasplatyrhynchos), in order to provide contrast with a slower developing species that reaches an endpoint of long distance migration on the wing \citep{Dial:2012}.  As in citation, two general methods are used.  In drop tests, the birds are dropped from an inverted position to observe their righting response and any subsequent motions.  In tosses, birds are thrown at a random orientation.  The birds are compared to a null model of a passive ballistic ping pong ball, to allow visible detection of when birds are producing significant forces and torques in the air.  Computational methods are also applied to closely check trajectories for the earliest detectable directed aerial descent.
 
 \section{Methods and materials}
+\subsection{Study animals}
+To provide comparison with a species with slower wing development, a single batch of five Mallard Ducks (\Anasplatyrhynchos), 2 male and 3 female, was obtained as day-old-hatchlings from a local waterfowl farm (Metzer Farms; Gonzales, CA). Ducklings were housed on absorbent bedding in a large fiberglass tub and were fed on higher-protein waterfowl starter (Mazuri, PMI Nutrition International, St.\ Louis, MO).  Care of ducklings was similar to care for Chukar chicks, using protocols approved by the UC Berkeley ACUC.  Ducks were studied at ages between \SIrange{1}{70}{dph}. Birds were re-homed at a public duck pond in San Francisco, CA with ACUC approval at the end of the study. 
+
+For all birds, body mass was measured daily using a digital balance (Scout Pro; Ohaus, Parsipanny, NJ).  Wings were also photographed daily, to measure areas, wingspan, aspect ratio, second moment of area, and wing loading.  Birds were restrained by hand against a board and photographed using a digital camera (Canon PowerShot SD550).  The photos were then digitized using a script written in Python. The resulting morphometric data were plotted and analysed in R \citep{R:2013} to examine trends with age and mass.  Aspect ratio, second moment of area, and wing loading were calculated as:
+\begin{equation}
+AR = s^2/A
+\index{aspect ratio}
+\end{equation}
+\begin{equation}
+I_s = \int\int_{wing} |\vec r - \vec r_{root}|^2 dA
+\index{second moment of area}
+\end{equation}
+\begin{equation}
+WL = \frac{mg}{2A}
+\index{wing loading}
+\end{equation}
+
+\subsection{General filming setup}
+Aerial behaviours were filmed using methods similar to \citep{Jusufi:2008, Munk:2011, Jusufi:2011}.  Birds were dropped in several different initial orientations (described below), from heights ranging between \SIrange{0.5}{2.5}{\meter} (described below).  Aerial behaviours were captured using a suite of high speed and conventional digital video cameras.  High speed cameras consisted of between one and three cameras (AOS Technologies AG, Baden Daettwil, Switzerland; or Fastec Imaging, San Diego, CA) operated at \SI{500}{frames\per\second}, with one camera filming from the front and additional cameras filming from above or to the side.  Conventional cameras consisted of up to seven high definition (HD) cameras (FlipHD, Cisco Systems, San Francisco, CA), typically with four cameras filming at different angles from the front and additional cameras filming from above or to the side.  Illumination was provided by 16 \SI{100}{\watt} flood lights hung from the ceiling. The lights, in conjunction with additional oil heaters, were able to warm the entire filming area to the same temperature as the brooder area.  
+	For 2D analyses, cameras were calibrated with a scale held in frame at the same position as the birds. For 3D reconstruction, camera parameters were estimated by filming a calibration object (chessboard) and using a Python script to implement single-camera and stereo camera calibration routines from the OpenCV library (see appendix~\ref{app:cam}).  Body positions (centre or individual limbs) were then digitized frame by frame using ImageJ (NIH, Bethesda, MD) with the MTrackJ plugin \citep{Meijering:2012}, and the resulting kinematics were analysed as described below. 
+
+\subsection{Aerial righting drop tests, righting success, and mode}
+The first batch of Chukars and the batch of Mallard Ducks were dropped with upright, \ang{90}, and inverted (\ang{180}) orientations presented at random.  It was found that righting from the fully inverted position occurred very quickly in both (Section~\ref{sec:1results}, within \SI{4}{dph}) and that drops from upright position always remained upright.  Accordingly, subsequent drops for the remaining four Chukar batches were conducted only from the \ang{180} inverted position.  As required by the animal use protocol, birds younger than \SI{4}{dph} were dropped from no higher than \SI{0.5}{\meter}; birds older than \SI{5}{dph} were dropped from \SI{1}{\meter}. 
+	Aerial righting drop tests were scored by two observers recording if birds landed on their feet. In addition to this, high speed videos were reviewed to confirm righting.  Typically, the final bird position was also visible on Flip cameras.  For all high speed videos, we recorded righting success, drop distance, final angle reached, and wing beat frequency for the wing showing largest motions.  Drop distance was the distance fallen before righting was complete.  Final angle was the angle of the body attained at the end of the manoeuvre or when the body hit the ground if righting was not successful.  Wing beat frequency was recorded as the frequency of the wing with the largest motion during the manoeuvre (averaged over \numrange{2}{5} beats during the course of the manoeuvre).  Results were plotted and analysed in R \citep{R:2013}. 
+	Mode used during righting was identified from the high speed videos for batch 2.  Mode was clearly identifiable as either (1) righting by rolling using asymmetric wing and leg motions or (2) righting by pitching using symmetric wing and leg motions.  These are discussed further in Section~\ref{sec:1results}. 
+	To test if righting and directed descent are visually mediated, drops were conducted with normal, blindfold, and sham treatments.  Symmetric and asymmetric clipping of wings (all remiges proximal to the outermost secondaries) and complete clipping of the tail (all retrices) were also performed at the end of all other runs\footnote{In Chukar, manipulations to augment tail inertia were attempted by attaching plastic prosthetic long tails using veterinary wrap.  Tail augmentation was not successful; birds tended to foul the prosthetic tail or mounting vet wrap with feces or groom it off. Tail augmentation tests are not reported further here.}.  The results were analysed using Pearson's $\chi^2$ test in R \citep{R:2013}.
+
+\subsection{Identifying the onset of directed aerial descent}
+	We examined the onset of directed aerial descent during ontogeny and changes in directed aerial descent performance by dropping birds from \SIrange{5}{15}{dph}, \SI{1}{\meter} away from a desirable target: the brooder with the rest of the brood, food, and water. The brooder was a suitable target because birds removed from it would typically exhibit a distress call and when released on the ground would walk towards the brooder.  Other previous research also made use of the brooder to elicit movements \citep{Jackson:2009}.  
+	In batch 2 and later, birds were dropped along with standard ping pong balls. The ping pong ball provided a null model of the expected behaviour under gravity alone in an indoor, still-air environment (simple ballistic model).  Under ballistic assumptions, trajectories should be parabolic with the second order derivative reflecting gravitational acceleration (e.g.\ $\ddot y = g$ where $g=\SI{-9.81}{\meter\per\second}$) (\citealp{Galileo:1638}, reviewed in \citealp{Naylor:1980}).  The ping pong ball also allowed quick scoring of videos to identify if the birds fell slower than the ping pong ball and if birds made visible horizontal progress towards the brooder. For each high speed video, we identified (1) righting success; (2) if birds visibly yawed towards the brooder; (3) if birds visibly slowed their descent in relation to the ping pong ball; (4) if birds visibly made horizontal progress to the brooder and (5) if birds landed at the brooder. Results were plotted and analyzed in R \citep{R:2013}.
+	Along with scoring of directed aerial descent performance in relation to falling ping pong balls, a quantitative analysis of the 2D kinematics of the body was conducted using maximum likelihood estimation (MLE) and an Akaike Information Criterion (AIC) \citep{Akaike:1974, Burnham:2002, Burnham:2011} implemented in R \citep{R:2013} using the \texttt{bbmle} package.  2D analysis used a single side- or front view high-speed camera calibrated using scales within the image. Body position was digitized during the entire manoeuvre using ImageJ (NIH, Bethesda, MD) with the MTrackJ plugin \citep{Meijering:2012}.  
+	The onset of aerial behaviours was detected by examining where the observed behaviours are no longer well-described by a passive ballistic null model consisting of simple gravity in $y$ and zero acceleration in $x$.  To accomplish this, the likelihood of a given 3D trajectory was computed based on several candidate models for the behaviour.  These were then compared using an Akaike Information Criterion (AIC), which compares the likelihood of a model to the number of parameters needed by the model:  
+\begin{equation}
+\mbox{AIC} = 2 k - 2 \ln(\mathcal{L})
+\end{equation}
+The candidate models were obtained from normal distributions around expected trajectories:
+\begin{equation}
+\end{equation}
+%\begin{align}
+%\notag g_0:  x &= X_0 + \mathcal{N}(0,\sigma)& &\text{(stationary)}\\
+%\notag g_1:  x &= X_0 + V t + \mathcal{N}(0,\sigma)& &\text{(constant velocity)}\\
+%\notag g_2:  x &= X_0 + V t + \frac{1}{2}a t^2 + \mathcal{N}(0,\sigma)& &\text{(constant acceleration)}\\
+%\notag g_2':  x &= X_0 + V t - \frac{1}{2} \num{9.81} t^2 + \mathcal{N}(0,\sigma)& &\text{(Earth gravity)}\\
+%\notag g_3:  x &= X_0 + V t + \frac{1}{2}a t^2 +\frac{1}{6}b t^3 + \mathcal{N}(0,\sigma)& &\text{(constant jerk)}\\
+%\end{align}
+Models up to the sixth derivative of position (constant snap, crackle, and pop) were considered.  The benefits of this method are that it explicitly identifies the measurement noise (as the $\sigma$ term in the normal distribution in these examples) and that it provides an estimate of higher order derivative terms without the need to numerically differentiate measured kinematic data (which injects large amounts of noise, masking any effect we wish to observe, as it likely does in \citep{Dial:2012}.  The derivation of these methods is given in Appendix~\ref{app:tdd}\footnote{This method was also benchmarked against autorotating seeds in a collaborative side project with Stevenson et al.\ \citep{Stevenson:2013}.}.
+
+
+
+
+\subsection{Bird tosses, three-dimensional analyses and inertial contribution to turns}
+	For a subset of runs, a three-dimensional analysis was conducted to examine more extreme examples of directed aerial descent not visible in 2D movements, as well as to examine the relative role of inertia versus aerodynamic forces and torques during righting. For these tests, birds were dropped as before.  In addition, birds older than \SI{10}{dph} were thrown at random orientations and directions.  As in drop tests, tossed birds were thrown with a ping pong ball to provide ready visual indication of departures from simple ballistic behaviour. 
+	In addition to quantifying performance relative to a visible passive ballistic trajectory, a few runs with multiple high speed cameras were used in a detailed 3D kinematic analysis.  The 3D kinematic analysis used a camera calibration technique that was developed based on \citep{Munk:2011, Bradski:2008}. The calibration made use of homography transforms for multiple views of a two-dimensional chessboard calibration object to obtain camera poses (3D position and rotation), focus (intrinsic) parameters, and relative positions to one another.  With the camera parameters and with homologous points digitized in each image from each camera, a minimization routine was used to minimize the 2D reprojection error of the estimated 3D position. The method differs from \citep{Munk:2011} in the use of homography transforms and a 2D, repositionable calibration object (chessboard) compared to the large and fixed frame of \citep{Munk:2011}; this makes the method here more field-portable and easy to setup.  Details of the method are given in Appendix~\ref{app:cam}.  
+	The relative role of inertia in accomplishing manoeuvres was examined using a numerical method to predict how the manoeuvre would unfold in the absence of any aerodynamic forces.  The method is derived in Appendix~\ref{app:ang}.  For a subset of videos, six landmarks (head, right wing, left wing, right leg, left leg, and body) were digitized to allow computation of angular velocity and angular momentum during the righting manoeuvre.
+	Point masses were assigned 3D positions based on digitized body and limb positions obtained as described above.  The mass values were scaled from measurements from a dead chukar of the same age.  These were then used in a forward calculation, to calculate the angular momentum and examine if it is constant (as would be predicted in a manoeuvre dominated by inertia) or if it is time-varying (as would be predicted where aerodynamic forces and torques are large).  The same data were also used in a reverse calculation, to obtain the whole body rotation that would result in a solely inertia case (i.e.\ in the case of a bird falling in a vacuum).  The methods here are superficially similar to (\citealp{Jusufi:2008}, work by Bergou) but avoid the need to derive explicit analytical expressions for multi-axis constrained linkages.  By numerically performing this calculation, this method is more applicable to a wider range of geometries and situations where the inertia acting to accomplish the manoeuvre is not straightforward to identify and lump into a single rotating element. 
+% Add Atilla Bergou SICB citation here? 
+
+\subsection{Checking for wing-assisted incline running and other uses of proto-wings}
+To examine aerial righting and directed aerial descent in the context of other behaviors, we attempted to observe the onset of wing-assisted incline running (WAIR) \citep{Dial:2003} in Chukar batches 1 and 2 ($n=15$ birds) and in Duck batch 1 ($n=5$).  Following \citep{Dial:2003}, we attempted to run birds up inclines ranging from \ang{15} to vertical, using surfaces covered in coarse grit sandpaper \citep{Dial:2003, Dial:2008, Jackson:2009, Tobalske:2011, Dial:2012}, corrugated cardboard, fabric (person's arm for Chukar; fabric-covered cardboard for Ducks), or hardware cloth (wire).  The goal of these measurements was not to completely re-do previous work \citep{Dial:2003} but to check if our batch was tracking these previous observations.   
+	Several methods were attempted to motivate birds to run up the incline.  We attempted to scare birds by hand, by threat of capture, or simulated predator (plastic snake, tame retriever dog).  We also placed birds on a level surface and then raised it.  The most effective methods, as described in \citep{Jackson:2009}, were to place other birds or mealworms or both at the top of the incline, or by placing the incline to lead from the outside to the wall of the brooder. 
+	In addition to testing for WAIR (which we found to be hard to elicit), we examined use of wings during both vertical and long jumps.  Both were elicited by suspending mealworms above or across from birds; or by placing birds on a platform with a gap to an identical platform on which the rest of the brood was placed.  For Chukar, we also observed use of wings for wing-assisted balancing, on level but narrow cylinders (PVC pipe, person's arm).  For Ducks, we observed wing flapping when drying and during swimming.  
+
+
+
+
+
 
 \section{Results}
+\subsection{Absence of WAIR}
+With Ducks, we were unable to elicit WAIR at all, in contrast to \citep{Dial:2012}. As incline angle increased, Ducks would place their belly on the incline and attempt to kick up it; at higher angles they would not attempt to ascend. Ducks also showed wing use during jumping, and increasing wing frequency during flap-drying and during bathing movements.  
+
+\subsection{Morphometrics}
+Ducks developed more slowly than Chukars but exhibited the same stages in the development of aerial behaviours.  While Chukars reached \SI{100}{\gram} over a \SI{19}{\day} period, Ducks attained \SI{1.2}{\kilo\gram} over \SI{62}{\day} (figure~\ref{fig:duckmass}). 
+\begin{figure}
+\begin{center}
+%\includegraphics{figures/ch-1/duck/morphometrics/mass-dph-bigger.pdf}
+\end{center}
+\caption{Duck mass (mean $\pm$ standard deviation) versus age.  During the \SI{60}{\day} experiment period, birds increased from around \SI{40}{\gram} to around \SI{1.2}{\kilo\gram}, a 30-fold difference.}
+\label{fig:duckmass}
+\end{figure}
+	As in Chukar, Duck wing morphometrics revealed breakpoints with body mass.  Area had a breakpoint at \SI{30}{dph}; analysis of variance showed that a model with two different lines was a better fit than one with one line (ANOVA, $p=\num{6.33e-7}$).  Similarly, against body mass, breakpoints were found in mass, span, and second moment of area at \SI{300}{\gram} (ANOVA, minimum $p=\num{2.2e-16}$). 
+\begin{figure}
+\begin{center}
+A %\includegraphics[width=2.5in]{figures/ch-1/duck/morphometrics/A-dph2.pdf}
+%\includegraphics[width=2.5in]{figures/ch-1/duck/morphometrics/A-g2.pdf} \\
+B %\includegraphics[width=2.5in]{figures/ch-1/duck/morphometrics/s-dph2.pdf}
+%\includegraphics[width=2.5in]{figures/ch-1/duck/morphometrics/s-g2.pdf} \\
+C %\includegraphics[width=2.5in]{figures/ch-1/duck/morphometrics/AR-dph2.pdf}
+%\includegraphics[width=2.5in]{figures/ch-1/duck/morphometrics/AR-g2.pdf} \\
+D %\includegraphics[width=2.5in]{figures/ch-1/duck/morphometrics/Ja-dph2.pdf}
+%\includegraphics[width=2.5in]{figures/ch-1/duck/morphometrics/Ja-g2.pdf} \\
+\end{center}
+\caption{Wing morphometrics as a function of age (left) and mass (right).  Wing area, span, and second moment of area increase steadily with age and with increasing body mass.}
+\label{fig:duckmorphometrics}
+\end{figure}
+	For Ducks, breakpoints were observed in wing loading at \SI{20}{dph} (ANOVA, $p=\num{1.0e-10}$) and \SI{300}{\gram} body mass (ANOVA, $p=\num{2.2e-16}$).  Prior to \SI{20}{dph}, wing loading is increasing, unlike in Chukar.  Wingbeat frequency is also decreasing slightly prior to \SI{30}{dph}, unlike in Chukar. 
+\begin{figure}
+\begin{center}
+A %\includegraphics{figures/ch-1/duck/morphometrics/WL-dph2.pdf}
+%\includegraphics{figures/ch-1/duck/morphometrics/WL-g2.pdf} \\
+B %\includegraphics{figures/ch-1/duck/righting/f-dph2.pdf}
+%\includegraphics[width=3in]{figures/ch-1/duck/morphometrics/IMG_2040.JPG}
+\end{center}
+\caption{Wing loading and wingbeat frequency. Wing loading increases prior to \SI{20}{dph}, unlike Chukars, and reaches a maximum at around \SI{300}{\gram}.  Righting is greatly delayed in Ducks.  Wingbeat frequency during righting decreases with age in Ducks as wing areas increase. }
+\label{fig:duckfreq}
+\end{figure}
+	Ducks used the same asymmetric wing and leg movements as Chukar to attempt righting early in ontogeny, however they were not successful in righting until much later (\SI{30}{dph} for Ducks versus \SIrange{6}{7}{dph} in Chukar).  The mode of righting did not show as clear a division between rolling and pitching in time; Ducks continued to use rolling motions later in ontogeny.  
+\begin{figure}
+\begin{center}
+%\includegraphics[width=4in]{figures/ch-1/duck/righting/pr-dph2.pdf}\\
+%\includegraphics[width=4in]{figures/ch-1/duck/righting/mode-dph2-annotated.pdf}
+\end{center}
+\caption{Percent righting and righting mode versus age in Ducks.  By \SI{37}{dph}, Ducks right every bird every time.  A rolling manoeuvre accomplished by asymmetric wing and leg movements is used prior to \SI{60}{dph} (purple) (see figure~\ref{fig:duckrolling}).  Very late in ontogeny, Ducks switch to pitching using a symmetric wing movement (blue) (figure~\ref{fig:duckpitching}).  The onset of righting between \SIrange{11}{28}{dph} corresponds to increases in wing area and span and a decrease in wing loading.}
+\label{fig:duckrighting1}
+\end{figure}
+\begin{figure}
+\begin{center}
+%\includegraphics{figures/ch-1/duck/pretties/20120112/20120112-composite-annotated.pdf}
+\end{center}
+\caption{Duckling attempts to righting by rolling using asymmetric wing and leg movements.  Left wing is flapping, right wing is not.  Legs are also kicked in an asymmetric motion.  Duck does not successfully right.}
+\label{fig:duckrollingfail}
+\end{figure}
+\begin{figure}
+\begin{center}
+%\includegraphics{figures/ch-1/duck/pretties/20111212/20111212-composite-annotated.pdf}
+\end{center}
+\caption{Righting by rolling using asymmetric wing and leg movements, used prior to \SI{50}{dph} in Ducks. This mode of righting is readily recognized by strong motions of one wing and absent or weak motions of the other, as well as asymmetrical leg kicking during the righting.  It is accomplished in \numrange{3}{5} wing beats and a drop of about \SI{1}{\meter}.}
+\label{fig:duckrolling}
+\end{figure}
+\begin{figure}
+\begin{center}
+%\includegraphics{figures/ch-1/duck/pretties/20111219/20111219-composite-annotated.pdf}
+\end{center}
+\caption{Righting by pitching using symmetric wing movements, prevalent after \SI{50}{dph} in Ducks.  This mode is distinguished from rolling by strong, symmetric movements of both wings.}
+\label{fig:duckpitching}
+\end{figure}
+\begin{figure}
+\begin{center}
+%\includegraphics{figures/ch-1/duck/righting/e-dph2big-annotated.pdf}
+\end{center}
+\caption{Final roll angle versus age in Duck.  This plot includes birds that do not successfully right, to illustrate progress in righting over the first \SI{37}{dph}.  Following \SI{37}{dph}, Ducks are righting every time from fully \ang{180} inverted position.}
+\label{fig:duckrighting4}
+\end{figure}
+	As in Chukar, for Ducks, directed aerial descent was observed to progress from righting, to turning to the brooder, slowing descent, moving towards the brooder and landing in it.  Ducks completed this progression much later (\SI{60}{dph}) and at larger body mass (\SI{1.2}{\kilo\gram}). 
+\begin{figure}
+\begin{center}
+%\includegraphics{figures/ch-1/duck/directed-descent/dd-dph-big-annotated.pdf}
+%%%%\includegraphics{figures/ch-1/directed-descent/f2-dph.pdf}
+\end{center}
+\caption{Directed aerial decent percentages of righting, turning to the brooder, slowing descent, moving to the brooder, and landing in the brooder, versus age in Ducks.}
+\label{fig:duckddstages}
+\end{figure}
+\begin{figure}
+\begin{center}
+%\includegraphics{figures/ch-1/duck/pretties/20120101/20120101-composite-annotated.pdf}
+\end{center}
+\caption{Directed aerial descent in a Duck. Duck is thrown in inverted position, rights by pitching using asymmetric wing movements, steers towards the brooder, slows its descent, and lands in the brooder.}
+\label{fig:duckddpretty}
+\end{figure}
+
+
+
+
+
+
+
 
 \section{Discussion}
+\subsection{Observed sequence is consistent with aerial hypotheses}
+During ontogeny, ducks grew progressively better at responding to aerial challenges.  As in chukar \cite{Evangelista:2014b}, aerial righting developed first using an asymmetric rolling mode.  Starting at X, birds began transitioning to righting in pitch, using symmetric flapping.  Righting was followed by an expanding suite of behaviours (yaws to preferred targets, slowing of descent, horizontal progress, and landing at preferred targets) along a continuum of directed aerial descent.  At X, descents were visibly slowed compared to a passive reference (ping pong ball).  During ontogeny, ability to use the wings in other contexts (jumps, short vertical flights) also increased.  These are all consistent with aerial hypotheses of the origin of flight \citep{Dudley:2011}. 
 
-\begin{acknowledgements}
-We thank people...
-\end{acknowledgements}
+\subsection{Observed sequence precedes WAIR}
+Righting was first accomplished with asymmetric wing and leg motions that caused the body to roll (figure~\ref{fig:righting2})\footnote{Roll-first may correspond to model test and stability results in chapter~\ref{ch:3}.}.  This preceded the onset of wing-assisted incline running and is in good agreement with the ``asymmetric flapping / quadrupedal crawling'' stage identified in \citep{Jackson:2009}.  By the time WAIR was observed, birds had already been capable of the first stages of directed aerial descent for several days, and had already exhibited righting by pitching using symmetric movements of the wings and legs. 
 
-\bibliography{references/duck}
-\label{lastpage}
+The shifts in preferred directions of manoeuvring and methods used to accomplish aerial righting, by left-right asymmetric movements, inertial movements, or symmetric movements as predicted by manoeuvring hypotheses \citep{Dudley:2011}.  Furthermore, the prediction that all the same stages would occur in a bird of a vastly different size and delayed developmental trajectory (Duck) is also supported.  In contrast, the predictions of an alternative hypothesis \citep{Dial:2003, Dial:2008, Tobalske:2011} are not borne out in our observations; during both evolution and ontogeny, organisms manoeuvre early on, using left-right asymmetries; while the symmetrical flapping needed for wing-assisted incline running only comes later.
+
+This suggests that WAIR is a by-product of flight, rather than a cause of or early phase of it. This is supported by the relative rarity of WAIR in these experiments, markedly in contrast with claims of ``every bird, every time'' in \citep{Dial:2003}. Onset WAIR did correspond to the use of wings for other tasks (balancing, pitch control during jumps, etc), and it is not to suggest that WAIR for an animal with capable wings is an effective way to navigate an obstacle.  However, flight is an aerial behaviour, and it is most parsimonious to consider its development driven by aerial tasks. As further support for this, we know of no study that has demonstrated WAIR in chicks in any ecologically relevant context in the field\footnote{According to hunter's accounts, Chukar adults use WAIR to run up trees in order to glide down slopes and drops \citep{Otoole:2003}; adult WAIR use would follow development of all other aerial behaviours.}.  On the other hand, behaviours in which newly hatched chicks jump from trees or other high places appear in wood ducks (\emph{Aix sp.}), guillemots (\emph{Uria sp.}), and murrelets (\emph{Synthliborhamphus sp.}) \citep{Attenborough:1998}; other undescribed examples certainly exist.  
+
+
+\subsection{Inertial mechanisms important early, largest inertias are head and legs; aerodynamic mechanisms dominate later}
+Birds lack a massive tail (unlike geckos) and their axial skeleton is stiffened by imbricated ribs and by the widespread fusion at the synsacrum (unlike mammals).  I expected the avenues available to other vertebrate taxa for generating zero-angular-momentum turns would not be present in birds.  This was not supported; young birds still appear partially capable of using inertia from wings and legs.  However, zero-angular-momentum mechanisms appear only to be effective at the start of manoeuvres while at low speed.  The remainder of the manoeuvre is not zero angular momentum; inertial-only models over-predict motion in late stages, and righting manoeuvres took much longer to complete than would be anticipated if they were solely inertial.  
+
+Despite the limitations of inertial mechanisms, their importance early in manoeuvres supports manoeuvring hypotheses of the origin of flight.  Early in a manoeuvre (or in ontogeny or in evolution), a wide range of mechanisms (each of which may only be moderately effective) are used to accomplish righting and turns. The inertias associated with limbs are significant: wings are 8\% of body mass in \SI{10}{dph} Chukar (table~\ref{tbl:deadchuk}); while the head and neck are 22\% and the legs are 17\%.  Wing inertia increases relatively quickly (for example, wing second moment of area, figure~\ref{fig:morphometrics}D, scales as $J_a \sim t^{2.5}$). It remains to be seen if there is a ``sweet spot'' where inertia is briefly dominant before aerodynamic forces take over. 
+
+Theropod ancestors of birds had similar hips but lacked the rib cage stiffening; they also possessed long tails, and studies of falling bird chicks alone may not fully address this.  While manipulations to increase tail inertia by adding a prosthesis were not successful here, we predict that aerial righting reflexes are present in other archosaurs.  This would provide a (somewhat weak) extant phylogenetic bracket for the presence of aerial righting in bird ancestors.
+
+An area not yet addressed is the size-scaling of aerial righting ability.  Chukars (\SIrange{10}{100}{\gram}) developed aerial righting very quickly; this was much delayed in Ducks (\SIrange{0.04}{1.2}{\kilo\gram}).  Duck wings were much smaller initially in comparison to body size, however Ducks were able to use inertia associated with other appendages (namely the head, neck, and legs) for manoeuvres.  Many phylogenetic reconstructions of size in the clades leading to birds suggest they were small, perhaps small enough that both inertia and aerodynamics are important in the initial aerial righting given the phylogenetic constraints on axial body movement.  
+
+\subsection{Evolutionary significance for the origins of bird flight}
+WAIR has received much attention because of the assertion, via the ontogenetic transitional wing (OTW) hypothesis, that it was a major ancestral function in the theropod ancestors of birds.  I state two reservations here.  First, there is no guarantee that ``ontogeny recapitulates phylogeny,'' though here I entertain the idea in response to previous work \citep{Dial:2003, Tobalske:2011, Bundle:2003, Dial:2008, Jackson:2009, Dial:2012}.  Second, the assertion by some WAIR proponents that raw force generation by symmetric wing movements comes first and that aerial manoeuvring and control come later is wrong.  We have seen here that aerial righting (a manoeuvre) precedes WAIR in ontogeny.  Every animal in the air, whether it took off from the ground, jumped off the top of an incline it had run up, or fell from a tree, must manoeuvre, and early ability to manoeuvre (righting, directed aerial descent) is evidence of this.  WAIR may be important, but manoeuvring is more important and informative in understanding the evolution of flight in birds. 
+
+Aerial righting and some degree of manoeuvrability has been demonstrated in a wide range of animals, including ones without wings or other obvious aerial features such as ants \citep{Munk:2011}, geckos \citep{Jusufi:2008, Jusufi:2010}, stick insects \citep{Jusufi:2011, Zeng:2013}, or even skydiving humans \citep{Cardona:2011, Evangelista:2012}.  It should not be surprising to see similar sequences among vastly different taxa; flight is constrained by physics. Physics is independent of phylogenetic history, so some degree of convergence should be reassuring, but it is still important to also test such hypotheses against what we know of the phylogenetic history to provide robustness against the sins of conflating ontogeny with phylogeny or of making too much out of a single species.  This will be the focus of Chapters~\ref{ch:2} and \ref{ch:3}.
+
+
+
+
+
+
+\section*{Acknowledgements}
+We thank L Waldrop, K Dorgan, Y Munk, Y Zeng, E Kim, M Badger, S Chang, N Sapir, V Ortega, M Wolf, J McGuire and R Fearing for their analysis suggestions, assistance and support.  We also thank S Cam, T Huynh, I Krivitsky, A Kwong, D Marks, N Ray and the Berkeley Undergraduate Research Apprentice Program (URAP); N Hahn, C Ferrechia, and K Moorhouse for their advice and assistance in raising birds; and the Berkeley Centre for Integrative Biomechanics Education and Research (CIBER) for the use of high speed cameras.  
+
+\section*{Funding statement}
+DE was supported by NSF Integrative Graduate Education and Research Traineeship (IGERT) \#DGE-0903711 and by a grant from the National and Berkeley local chapter of Sigma Xi.
+
+\bibliography{duck}
 \end{document}

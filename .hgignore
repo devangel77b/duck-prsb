@@ -10,5 +10,6 @@ syntax: glob
 *.DS_Store
 ~*
 ch-1.tex
+.dropbox
 
 syntax: regexp
